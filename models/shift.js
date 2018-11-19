@@ -1,0 +1,36 @@
+module.exports = (sequelize, DataTypes) => {
+  const Shift = sequelize.define("shift", {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    instructions: {
+      type: DataTypes.STRING(525000),
+      allowNull: false
+    },
+    user: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    }
+  });
+  return Shift;
+};
+
+
+// module.exports = (sequelize, DataTypes) => {
+//   const Assignment = sequelize.define("assignment", {
+//     title: {
+//       type: DataTypes.STRING,
+//       allowNull: false
+//     },
+//     instructions: {
+//       type: DataTypes.STRING(525000),
+//       allowNull: false
+//     },
+//     user: {
+//       type: DataTypes.INTEGER,
+//       allowNull: false
+//     }
+//   });
+//   return Assignment;
+// };
