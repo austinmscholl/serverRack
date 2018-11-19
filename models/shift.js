@@ -12,12 +12,20 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    start: {
-      type: DataTypes.DATE,
+    startDate: {
+      type: DataTypes.DATEONLY,
       allowNull: false
     },
-    end: {
-      type: DataTypes.DATE,
+    endDate: {
+      type: DataTypes.DATEONLY,
+      allowNull: false
+    },
+    startTime: {
+      type: DataTypes.TIME,
+      allowNull: false
+    },
+    endTime: {
+      type: DataTypes.TIME,
       allowNull: false
     },
     pay: {
@@ -35,22 +43,3 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Shift;
 };
-
-
-// module.exports = (sequelize, DataTypes) => {
-//   const Assignment = sequelize.define("assignment", {
-//     title: {
-//       type: DataTypes.STRING,
-//       allowNull: false
-//     },
-//     instructions: {
-//       type: DataTypes.STRING(525000),
-//       allowNull: false
-//     },
-//     user: {
-//       type: DataTypes.INTEGER,
-//       allowNull: false
-//     }
-//   });
-//   return Assignment;
-// };

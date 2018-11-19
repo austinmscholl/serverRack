@@ -8,7 +8,6 @@ const port = process.env.PORT;
 
 const shift = require("./controllers/shiftcontroller");
 const user = require("./controllers/usercontroller");
-const submission = require("./controllers/submissioncontroller");
 sequelize.sync(); // {force:true} to reset
 
 app.use(bodyParser.json()); // returns middleware and only looks at requests where the 'Content-Type' header matches 'type' option
@@ -23,7 +22,6 @@ app.get('/api/hello', (req, res) => {
 
 //Protected routes (always requires authentication)
 app.use(require("./middleware/validate-session"));
-app.use("/api/submission", submission);
 app.use("/api/shift", shift);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
