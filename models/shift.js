@@ -1,14 +1,34 @@
 module.exports = (sequelize, DataTypes) => {
   const Shift = sequelize.define("shift", {
-    title: {
+    hospitalId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    hospitalName: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    instructions: {
-      type: DataTypes.STRING(525000),
+    department: {
+      type: DataTypes.STRING,
       allowNull: false
     },
-    user: {
+    start: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    end: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    pay: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    pickedUp: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    nurse: {
       type: DataTypes.INTEGER,
       allowNull: false
     }

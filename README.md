@@ -1,6 +1,6 @@
 # Shift Manager (back end)
 
-This repo represents the back end web API created by Austin Scholl of Eleven Fifty Academy.
+This repo represents the back end web API created by Austin Scholl.
 
 View the deployed application (in its current state) at https://shiftmanager-server.herokuapp.com
 

@@ -61,7 +61,7 @@ router.post("/login", (req, res) => {
   );
 });
 
-//GET: list all hospitalss (for nurses)
+//GET: list all hospitals (for nurses)
 router.get("/hospitals", validateSession, (req, res) =>
   User.findAll({ where: { permission: "hospital" } })
     .then(data => res.json(data))
