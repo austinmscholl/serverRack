@@ -4,15 +4,15 @@ const Shift = require("../db").import("../models/shift");
 //POST: create new shift (for hospitals)
 router.post("/new", (req, res) =>
   Shift.create({
-    hospitalId: req.body.shift.hospitalId,
-    hospitalName: req.body.shift.hospitalName,
-    department: req.body.shift.department,
-    startDate: req.body.shift.startDate,
-    endDate: req.body.shift.endDate,
-    startTime: req.body.shift.startTime,
-    endTime: req.body.shift.endTime,
-    pay: req.body.shift.pay,
-    pickedUp: req.body.shift.pickedUp,
+    hospitalId: req.body.hospitalId,
+    hospitalName: req.body.hospitalName,
+    department: req.body.department,
+    startDate: req.body.startDate,
+    endDate: req.body.endDate,
+    startTime: req.body.startTime,
+    endTime: req.body.endTime,
+    pay: req.body.pay,
+    pickedUp: req.body.pickedUp,
     nurse: req.user.id
   })
     .then(shift => res.json({ shift: shift }))

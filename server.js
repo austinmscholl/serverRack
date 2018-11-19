@@ -13,6 +13,10 @@ sequelize.sync(); // {force:true} to reset
 app.use(bodyParser.json()); // returns middleware and only looks at requests where the 'Content-Type' header matches 'type' option
 app.use(require("./middleware/headers")); //Middleware for authentication
 
+
+// sequelize.sync() is in our associations.js file
+require('./associations.js')
+
 //Exposed routes (authentication subject to individual routes)
 app.use("/api/user", user);
 
